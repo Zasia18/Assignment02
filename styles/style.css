@@ -128,18 +128,19 @@ position: relative;
     background-color: #1A0B2E;
 }
 .about-info{
-    width:75%;
+    width:56%;
     max-width: 1200px;
     padding-bottom: 80px;
     padding-top: 50px;
     margin:auto;
     justify-items: center;
+    text-align: center;
 }
 
 .about-info p{
     color: rgba(255, 255, 255, 0.744);
     font-size: 16px;
-    line-height: 20px;
+    line-height: 28px;
     padding-top: 16px;
 }
 #card-container{
@@ -155,6 +156,10 @@ position: relative;
 .card{
     display: grid;
     gap: 16px;
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
 }
 .card h2{
     font-size: 48px;
@@ -351,14 +356,15 @@ position: relative;
     display: none;
 }
 
+
 /* fro Mobile Device */
 @media (max-width:576px){
 
     .hamburger{
         display: block;
     }
+    
     .menu{
-
         position: absolute;
         top: 80px;
         right: 0;
@@ -374,7 +380,7 @@ position: relative;
     nav .btn{
         display: none;
     }
-      #menu-toggle:checked + .hamburger + .menu {
+    #menu-toggle:checked + .hamburger + .menu{
         display: flex;
     }
     .banner-container{
@@ -382,16 +388,21 @@ position: relative;
         max-width: 400px;
         margin: 40px auto;
     }
+    .images-container p{
+    font-size: 16px;
+    top: 10px;
+    right: -15px;
+}
 
     .circle-image{
         height: 200px;
         width: 200px; 
 }
     .microphone-image{
-        height: 80px;
-        width: 80px; 
-        top:60px;
-        right: 60px;
+        height: 70px;
+        width: 47px; 
+        top:65px;
+        right: 75px;
 }
 .banner-info h3{
     font-size: 40px;
@@ -400,6 +411,9 @@ position: relative;
     width: 91%;
     max-width: 400px;
     padding: 40px 0px 40px 0px;
+}
+.break-point{
+    display: none;
 }
 .section-heading{
     font-size: 30px;
